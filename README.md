@@ -1,99 +1,16 @@
 # R
 ## Rstudio
-install.packages("gganimate")
-
-install.packages("av")
-
-install.packages("gifski")
-
-install.packages("gapminder")
-
-install.packages("tidyverse")
-
-install.packages("dplyr")
-
-install.packages("gifski")
-
-install.packages("av")
-
-install.packages("viridis")
-
-
-library(gganimate)
-
-library(viridis)
-
-library(RColorBrewer)
-
-library(tidyverse)
-
-library(gapminder)
-
-
-data()
-
-
-
-
-
-graph1 <- Orange %>%
-
-  ggplot(aes(age, circumference, color = circumference,size = circumference)) +
-  
-  geom_point( alpha = 0.5) +
-  
-  geom_line() +
-  
-  facet_wrap(~Tree) +
-  
-  labs(title = "Age vs Circumference",
-  
-  x = "Age (days)",
-       y = "Circumference (mm)") +
-       
-  theme_bw() +
-  
-  scale_color_viridis_c()
-
-# Add animation to the plot
-graph1.animation <- graph1 +
-
-  transition_time(age) +
-  
-  labs(subtitle = 'Age: {frame_time}') +
-  
-  shadow_wake(wake_length = 0.1)
-  
-
-# Render and save the animation
-animate(graph1.animation, height = 500, width = 800, fps = 30, duration = 15)
-
-anim_save("graph1_animation.gif")
-
-
-
-![file2ed03938793d](https://github.com/user-attachments/assets/19eb029e-5ebb-4735-a486-28a87c5875d1)
-
-Orange %>%
-
-  #filter(Tree == 1 | Tree == 2) %>%
-  
-  #filter(Tree %in% c(1,2))%>%
-  
-  ggplot(aes(Tree, circumference, color = Tree))+
-  
-  geom_boxplot()+
-  
-  coord_flip()+
-  
-  theme_bw()+
-  
-  theme(panel.grid.major = element_blank(),
-  
-  panel.grid.minor = element_blank(),
-  
-  legend.position = "none")+
-  
-  facet_wrap(~Tree)
-
-![Rplot](https://github.com/user-attachments/assets/e986a401-97db-4cbc-b67f-1575fad48e1d)
+![Rplot](https://github.com/user-attachments/assets/932af356-0123-4caa-bd82-a98be835aa06)
+![Rplot01](https://github.com/user-attachments/assets/cbd07632-17ec-46c5-8d6e-0a93b81b8573)
+![Rplot02](https://github.com/user-attachments/assets/00334a9b-8c67-4a4b-bf47-3e2592f80c3b)
+![Rplot03](https://github.com/user-attachments/assets/b91ddb7c-bd14-4cbe-85b7-cf908d178652)
+![Rplot04](https://github.com/user-attachments/assets/c789718d-ac59-4782-9377-9452e93f0222)
+![filec78208164cc](https://github.com/user-attachments/assets/7d28cb2b-9b2d-4379-b1f8-82da117e94b1)
+![Rplot05](https://github.com/user-attachments/assets/54b1c724-97ee-4e48-9515-8aa37c669936)
+![Rplot06](https://github.com/user-attachments/assets/dd940452-2745-4dff-9e33-c8546745f06e)
+![Rplot07](https://github.com/user-attachments/assets/55abf77c-82ea-4a28-96e2-a24c01f22700)
+![Rplot08](https://github.com/user-attachments/assets/c78d24d3-4b29-474d-9f52-fd9af05e175e)
+![Rplot09](https://github.com/user-attachments/assets/212a9473-6f8f-42d1-a0f5-1302c315e558)
+![filec781c1e1def](https://github.com/user-attachments/assets/bcd23696-df22-420e-b467-667ceae9b468)
+![Rplot11](https://github.com/user-attachments/assets/a8ec2e58-6787-4a6c-a95d-9273b4df3b09)
+![Rplot12](https://github.com/user-attachments/assets/b7dcf060-adaf-448d-b583-fbf3c94791ba)
